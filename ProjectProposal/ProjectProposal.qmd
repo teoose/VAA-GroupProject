@@ -1,0 +1,76 @@
+---
+title: "Decoding Chaos in Colours"
+subtitle: "Our Project Proposal"
+date: "4 February 2024"
+date-modified: "last-modified"
+execute: 
+  eval: true
+  echo: true
+  warning: false
+---
+
+Authors: Imran, Suan Ern, Zachary Wong
+
+# Motivation
+
+The motivation of the project is to use open-source government data to provide free-to-use visualisation tools that is suitable for different groups of users:
+
+1.  
+
+2.  
+
+3.  
+
+# Objectives
+
+The objective of the project is to:
+
+1.  examine open-source government data on terrorist events worldwide and derive useful variables that affect the international terrorist incidents, and
+2.  build a web-enabled interactive visual analytics application by using R Shiny based on World Terrorism Database.
+
+# Challenge
+
+\<insert text\>
+
+# Data
+
+The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"}. The dataset consist of XX variables and XX datapoints. The team intends to manipulate the dataset as follows:
+
+1.  Create new columns........ to achieve..
+2.  Filter dataset... to achieve..
+
+# Methodology & Analytical Approach
+
+For this project, the following approach will be taken by the team:
+
+1.  **Data Preparation:** Clean the dataset by handling missing values, removing irrelevant variables, filtering variables and encoding categorical variables if necessary.
+
+2.  **Exploratory Data Analysis via Data Visualisation Methods:** Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:
+
+    1.  Network graph
+
+    2.  Time-series bubble plot
+
+    3.  Geospatial heatmap/ hotspot
+
+3.  **Confirmatory Data Analysis via Statistical Methods:** Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.
+
+    1.  Model Diagnostic: checking for multicollinearity
+
+    2.  Model Diagnostic: checking normality assumption
+
+    3.  Oneway ANOVA Test: ggbetweenstats() method
+
+    4.  Significant Test of Correlation: ggscatterstats()
+
+# Prototype
+
+\<insert text\>
+
+# R Shiny Packages
+
+\<insert text\>
+
+# Project Schedule
+
+\<insert text\>
