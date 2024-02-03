@@ -2,18 +2,40 @@ project:
   type: website
 
 website:
-  title: "VAA-GroupProject"
+  title: "Global Terrorism"
+  page-navigation: true
+  back-to-top-navigation: true
+  sidebar: false
   navbar:
-    left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+    logo: ""
+    title: false
+    search: true
+    
+    right:
+      - text: "Home"
+        href: index.qmd
+      - text: "Shiny App"
+        href: ".html"
+      - text: "User Guide"
+        href: "UserGuide/UserGuide.html"
+      - text: "Project Proposal"
+        href: "ProjectProposal/ProjectProposal.html"
+      - text: "Prototype"
+        href: "Prototype/Prototype.html"
+  page-footer:
+    right: 
+      - text: "©2024!"
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - flatly
+    mermaid: 
+      theme: neutral
     css: styles.css
-    toc: true
-
+    grid:
+      sidebar-width: 100px
+      body-width: 1200px
+      margin-width: 200px
+      gutter-width: 2.0rem
 editor: visual
-
