@@ -11,6 +11,8 @@ execute:
 
 Authors: Imran, Suan Ern, Zachary Wong
 
+![](images/GTD Heatmap_2020_Thumb.png)
+
 # Motivation
 
 The motivation of the project is to use open-source government data to provide free-to-use visualisation tools that is suitable for different groups of users:
