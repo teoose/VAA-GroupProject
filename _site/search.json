@@ -19,5 +19,33 @@
     "title": "Decoding Chaos in Colours",
     "section": "",
     "text": "Authors: Imran, Suan Ern, Zachary Wong\n\nMotivation\nThe motivation of the project is to use open-source government data to provide free-to-use visualisation tools that is suitable for different groups of users:\n\n\n\n\n\n\n\nObjectives\nThe objective of the project is to:\n\nexamine open-source government data on terrorist events worldwide and derive useful variables that affect the international terrorist incidents, and\nbuild a web-enabled interactive visual analytics application by using R Shiny based on World Terrorism Database.\n\n\n\nChallenge\n&lt;insert text&gt;\n\n\nData\nThe project will examine the Global Terrorism Database™ (GTD) from University of Maryland. The dataset consist of XX variables and XX datapoints. The team intends to manipulate the dataset as follows:\n\nCreate new columns…….. to achieve..\nFilter dataset… to achieve..\n\n\n\nMethodology & Analytical Approach\nFor this project, the following approach will be taken by the team:\n\nData Preparation: Clean the dataset by handling missing values, removing irrelevant variables, filtering variables and encoding categorical variables if necessary.\nExploratory Data Analysis via Data Visualisation Methods: Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:\n\nNetwork graph\nTime-series bubble plot\nGeospatial heatmap/ hotspot\n\nConfirmatory Data Analysis via Statistical Methods: Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.\n\nModel Diagnostic: checking for multicollinearity\nModel Diagnostic: checking normality assumption\nOneway ANOVA Test: ggbetweenstats() method\nSignificant Test of Correlation: ggscatterstats()\n\n\n\n\nPrototype\n&lt;insert text&gt;\n\n\nR Shiny Packages\n&lt;insert text&gt;\n\n\nProject Schedule\n&lt;insert text&gt;\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "G5_Imran/workingfile.html",
+    "href": "G5_Imran/workingfile.html",
+    "title": "Imran’s page",
+    "section": "",
+    "text": "pacman::p_load(tidyverse, ggplot2, plotly, dplyr)\n\n\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(plotly)\nlibrary(dplyr)\n\n# Read the dataset\ndata &lt;- read.csv(\"data/data_filtered_analysis.csv\")\n\n# Prepare the data by grouping and summarizing\ndata_prepared &lt;- data %&gt;%\n  group_by(country_txt) %&gt;%\n  summarise(Incidents = n(),\n            Kills = sum(nkill, na.rm = TRUE)) %&gt;%\n  ungroup()\n\n\n# Create the bubble plot\np &lt;- ggplot(data_prepared, aes(x = Incidents, y = Kills, size = Kills, color = country_txt)) +\n  geom_point(alpha = 0.7) +\n  scale_size(range = c(1, 20)) + # Adjust this range based on your data to make the plot look better\n  theme_minimal() +\n  labs(title = \"Terrorism Incidents vs. Casualties by Country, 1970 - 2023\",\n       x = \"Number of Incidents\",\n       y = \"Number of Casualties\") +\n  theme(legend.position = \"none\") # Optional: Adjust or remove based on preference\n\np_interactive &lt;- ggplotly(p, tooltip = c(\"country_txt\", \"Incidents\", \"Kills\"))\n\n# Print the interactive plot\np_interactive"
+  },
+  {
+    "objectID": "G5_Imran/workingfile.html#loading-r-package",
+    "href": "G5_Imran/workingfile.html#loading-r-package",
+    "title": "Imran’s page",
+    "section": "",
+    "text": "pacman::p_load(tidyverse, ggplot2, plotly, dplyr)\n\n\n# Load necessary libraries\nlibrary(ggplot2)\nlibrary(plotly)\nlibrary(dplyr)\n\n# Read the dataset\ndata &lt;- read.csv(\"data/data_filtered_analysis.csv\")\n\n# Prepare the data by grouping and summarizing\ndata_prepared &lt;- data %&gt;%\n  group_by(country_txt) %&gt;%\n  summarise(Incidents = n(),\n            Kills = sum(nkill, na.rm = TRUE)) %&gt;%\n  ungroup()\n\n\n# Create the bubble plot\np &lt;- ggplot(data_prepared, aes(x = Incidents, y = Kills, size = Kills, color = country_txt)) +\n  geom_point(alpha = 0.7) +\n  scale_size(range = c(1, 20)) + # Adjust this range based on your data to make the plot look better\n  theme_minimal() +\n  labs(title = \"Terrorism Incidents vs. Casualties by Country, 1970 - 2023\",\n       x = \"Number of Incidents\",\n       y = \"Number of Casualties\") +\n  theme(legend.position = \"none\") # Optional: Adjust or remove based on preference\n\np_interactive &lt;- ggplotly(p, tooltip = c(\"country_txt\", \"Incidents\", \"Kills\"))\n\n# Print the interactive plot\np_interactive"
+  },
+  {
+    "objectID": "G5_TSE/workingfile.html",
+    "href": "G5_TSE/workingfile.html",
+    "title": "Working File",
+    "section": "",
+    "text": "Back to top"
+  },
+  {
+    "objectID": "G5_Zach/workingfile.html",
+    "href": "G5_Zach/workingfile.html",
+    "title": "Working File",
+    "section": "",
+    "text": "Back to top"
   }
 ]
