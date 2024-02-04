@@ -13,15 +13,15 @@ website:
     
     right:
       - text: "Home"
-        href: index.qmd
+
       - text: "Shiny App"
-        href: ".html"
+
       - text: "User Guide"
-        href: "UserGuide/UserGuide.html"
+
       - text: "Project Proposal"
         href: "ProjectProposal/ProjectProposal.html"
       - text: "Prototype"
-        href: "Prototype/Prototype.html"
+
   page-footer:
     right: 
       - text: "©2024!"
