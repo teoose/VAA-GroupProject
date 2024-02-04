@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -143,7 +177,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Authors: Imran, Suan Ern, Zachary Wong</p>
-<p><img src="images/GTD Heatmap_2020_Thumb.png" class="img-fluid"></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/GTD Heatmap_2020_Thumb.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image Source: University of Maryland</figcaption>
+</figure>
+</div>
 <section id="motivation" class="level1">
 <h1>Motivation</h1>
 <p>The motivation of the project is to use open-source government data to provide free-to-use visualisation tools that is suitable for different groups of users:</p>
@@ -161,10 +200,6 @@ ul.task-list li input[type="checkbox"] {
 <li>build a web-enabled interactive visual analytics application by using R Shiny based on World Terrorism Database.</li>
 </ol>
 </section>
-<section id="challenge" class="level1">
-<h1>Challenge</h1>
-<p>&lt;insert text&gt;</p>
-</section>
 <section id="data" class="level1">
 <h1>Data</h1>
 <p>The project will examine the Global Terrorism Database™ (GTD) from <a href="https://www.start.umd.edu/gtd" target="_blank">University of Maryland</a>. The dataset consist of XX variables and XX datapoints. The team intends to manipulate the dataset as follows:</p>
@@ -181,8 +216,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Exploratory Data Analysis via Data Visualisation Methods:</strong> Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:</p>
 <ol type="1">
 <li><p>Network graph</p></li>
-<li><p>Time-series bubble plot</p></li>
-<li><p>Geospatial heatmap/ hotspot</p></li>
+<li><p>Time-series line chart and bubble plot</p></li>
+<li><p>Geospatial heatmaps and hotspot maps</p></li>
 </ol></li>
 <li><p><strong>Confirmatory Data Analysis via Statistical Methods:</strong> Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g.&nbsp;strength of relationships between variables) and make statistical observations under uncertainty.</p>
 <ol type="1">
@@ -197,13 +232,44 @@ ul.task-list li input[type="checkbox"] {
 <h1>Prototype</h1>
 <p>&lt;insert text&gt;</p>
 </section>
-<section id="r-shiny-packages" class="level1">
-<h1>R Shiny Packages</h1>
-<p>&lt;insert text&gt;</p>
+<section id="r-packages" class="level1">
+<h1>R Packages</h1>
+<p>Our team intends to use the following R packages to run the R Shiny Application:</p>
+<ul>
+<li><p><em>tidyverse</em>: a family of modern R packages specially designed to support data science, analysis and communication task including creating static statistical graphs.</p></li>
+<li><p><em>knitr</em>: an report generation tool.</p></li>
+<li><p><em>dplyr</em>: an R tool for working with data frame (e.g.&nbsp;objects).</p></li>
+<li><p><em>ggstatsplot</em>: an extension of ggplot2 package for statistical visualisation and graphics creation.</p></li>
+<li><p><em>ggdist</em>: an R package that support visualisation of distribution and uncertainty.</p></li>
+<li><p><em>ggiraph:</em> for making ‘ggplot’ graphics interactive.</p></li>
+<li><p><em>plotly:</em> R library for plotting interactive statistical graphs.</p></li>
+<li><p><em>performance</em>: an R package used for assessment, comparison and testing of statistical models.</p></li>
+<li><p><em>parameters</em>: an R package used for processing parameters of various statistical models.</p></li>
+<li><p><em>RColorBrewer</em>: an R package that provide various colour schemes and colour palettes.</p></li>
+<li><p><em>patchwork</em>: an R package for preparing composite figure created using ggplot2.</p></li>
+<li><p><em>DT</em>: an R interface to the JavaScript library DataTables that create interactive table on html page.</p></li>
+</ul>
 </section>
 <section id="project-schedule" class="level1">
 <h1>Project Schedule</h1>
-<p>&lt;insert text&gt;</p>
+<p>Below is an overview of our project timeline. For detailed list of task, please refer to gantt chart submitted.</p>
+<div class="cell">
+<details>
+<summary>Show code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gc, <span class="at">event.label =</span> <span class="st">"Due</span><span class="sc">\n</span><span class="st">31 Mar"</span>, <span class="at">event.time =</span> <span class="st">"2024-03-31"</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.event=</span><span class="fu">c</span>(<span class="st">"salmon"</span>),</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.done=</span><span class="fu">c</span>(<span class="st">"#459397"</span>),</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.notdone=</span><span class="fu">c</span>(<span class="st">"salmon"</span>),</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Project Timeline"</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">pch=</span><span class="dv">21</span>, <span class="at">pt.cex=</span><span class="dv">1</span>, <span class="at">cex=</span><span class="fl">0.7</span>, <span class="at">pt.bg=</span><span class="fu">c</span>(<span class="st">"#459397"</span>, <span class="st">"salmon"</span>),</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">border=</span><span class="st">"black"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Completed"</span>, <span class="st">"In progress"</span>), <span class="at">bg=</span><span class="st">"white"</span>, <span class="at">xpd=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<p><img src="ProjectProposal_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 
 
 </section>

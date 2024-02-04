@@ -11,7 +11,7 @@ execute:
 
 Authors: Imran, Suan Ern, Zachary Wong
 
-![](images/GTD Heatmap_2020_Thumb.png)
+![Image Source: University of Maryland](images/GTD%20Heatmap_2020_Thumb.png){fig-align="left"}
 
 # Motivation
 
@@ -30,10 +30,6 @@ The objective of the project is to:
 1.  examine open-source government data on terrorist events worldwide and derive useful variables that affect the international terrorist incidents, and
 2.  build a web-enabled interactive visual analytics application by using R Shiny based on World Terrorism Database.
 
-# Challenge
-
-\<insert text\>
-
 # Data
 
 The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"}. The dataset consist of XX variables and XX datapoints. The team intends to manipulate the dataset as follows:
@@ -49,30 +45,77 @@ For this project, the following approach will be taken by the team:
 
 2.  **Exploratory Data Analysis via Data Visualisation Methods:** Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:
 
-    1.  Network graph
+    1.  Time-series bar/ line chart and bubble plot
 
-    2.  Time-series bubble plot
-
-    3.  Geospatial heatmap/ hotspot
+    2.  Geospatial heatmaps and hotspot maps
 
 3.  **Confirmatory Data Analysis via Statistical Methods:** Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.
 
-    1.  Model Diagnostic: checking for multicollinearity
+    1.  Correlation test:
 
-    2.  Model Diagnostic: checking normality assumption
+        -   Correlation web plot, or
 
-    3.  Oneway ANOVA Test: ggbetweenstats() method
+        -   Significant Test of Correlation: ggscatterstats()
 
-    4.  Significant Test of Correlation: ggscatterstats()
+    2.  Model Diagnostic: checking for multicollinearity
+
+    3.  Model Diagnostic: checking normality assumption
+
+    4.  Oneway ANOVA Test: ggbetweenstats() method
 
 # Prototype
 
 \<insert text\>
 
-# R Shiny Packages
+# R Packages
 
-\<insert text\>
+Our team intends to use the following R packages to run the R Shiny Application:
+
+-   *tidyverse*: a family of modern R packages specially designed to support data science, analysis and communication task including creating static statistical graphs.
+
+-   *knitr*: an report generation tool.
+
+-   *dplyr*: an R tool for working with data frame (e.g. objects).
+
+-   *ggstatsplot*: an extension of ggplot2 package for statistical visualisation and graphics creation.
+
+-   *ggdist*: an R package that support visualisation of distribution and uncertainty.
+
+-   *ggiraph:* for making ‘ggplot’ graphics interactive.
+
+-   *plotly:* R library for plotting interactive statistical graphs.
+
+-   *performance*: an R package used for assessment, comparison and testing of statistical models.
+
+-   *parameters*: an R package used for processing parameters of various statistical models.
+
+-   *RColorBrewer*: an R package that provide various colour schemes and colour palettes.
+
+-   *patchwork*: an R package for preparing composite figure created using ggplot2.
+
+-   *DT*: an R interface to the JavaScript library DataTables that create interactive table on html page.
 
 # Project Schedule
 
-\<insert text\>
+Below is an overview of our project timeline. For detailed list of task, please refer to gantt chart submitted.
+
+```{r}
+#| echo: false
+library(plan)
+gc <-  read.gantt("data/grp5_ganttchartv2.csv")
+```
+
+```{r}
+#| code-fold: true
+#| code-summary: "Show code"
+
+plot(gc, event.label = "Due\n31 Mar", event.time = "2024-03-31",
+     col.event=c("salmon"),
+     col.done=c("#459397"),
+     col.notdone=c("salmon"),
+     main="Project Timeline"
+     )
+legend("topright", pch=21, pt.cex=1, cex=0.7, pt.bg=c("#459397", "salmon"),
+     border="black",
+     legend=c("Completed", "In progress"), bg="white", xpd=TRUE)
+```
