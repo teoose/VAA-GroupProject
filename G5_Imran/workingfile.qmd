@@ -51,3 +51,5 @@ p_interactive <- ggplotly(p, tooltip = c("country_txt", "Incidents", "Kills"))
 # Print the interactive plot
 p_interactive
 ```
+
+The next plot shows
