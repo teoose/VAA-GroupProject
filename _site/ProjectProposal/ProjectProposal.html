@@ -185,12 +185,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="motivation" class="level1">
 <h1>Motivation</h1>
-<p>The motivation of the project is to use open-source government data to provide free-to-use visualisation tools that is suitable for different groups of users:</p>
-<ol type="1">
-<li></li>
-<li></li>
-<li></li>
-</ol>
+<p>Terrorism, armed attacks, supremacist, etc have been making the headlines threathening uncertainty among the public and taking the loss of innocence. A good visual analysis of terrorist attacks is essential to (1) discover global terrorism trends, (2) unveil hidden relationships among terrorist in the network through their attacks and (3) ascertain the impact of fatalities and losses created.</p>
+<p>The team aims to use open-source government data to provide free-to-use visualisation tools that is suitable especially for the Defence sector to develop effective combating strategies against terrorism.</p>
 </section>
 <section id="objectives" class="level1">
 <h1>Objectives</h1>
@@ -215,16 +211,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p><strong>Data Preparation:</strong> Clean the dataset by handling missing values, removing irrelevant variables, filtering variables and encoding categorical variables if necessary.</p></li>
 <li><p><strong>Exploratory Data Analysis via Data Visualisation Methods:</strong> Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:</p>
 <ol type="1">
-<li><p>Network graph</p></li>
-<li><p>Time-series line chart and bubble plot</p></li>
+<li><p>Time-series bar/ line chart and bubble plot</p></li>
 <li><p>Geospatial heatmaps and hotspot maps</p></li>
 </ol></li>
 <li><p><strong>Confirmatory Data Analysis via Statistical Methods:</strong> Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g.&nbsp;strength of relationships between variables) and make statistical observations under uncertainty.</p>
 <ol type="1">
+<li><p>Correlation test:</p>
+<ul>
+<li><p>Correlation web plot, or</p></li>
+<li><p>Significant Test of Correlation: ggscatterstats()</p></li>
+</ul></li>
 <li><p>Model Diagnostic: checking for multicollinearity</p></li>
 <li><p>Model Diagnostic: checking normality assumption</p></li>
 <li><p>Oneway ANOVA Test: ggbetweenstats() method</p></li>
-<li><p>Significant Test of Correlation: ggscatterstats()</p></li>
 </ol></li>
 </ol>
 </section>

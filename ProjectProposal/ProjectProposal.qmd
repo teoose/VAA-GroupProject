@@ -15,13 +15,9 @@ Authors: Imran, Suan Ern, Zachary Wong
 
 # Motivation
 
-The motivation of the project is to use open-source government data to provide free-to-use visualisation tools that is suitable for different groups of users:
+Terrorism, armed attacks, supremacist, etc have been making the headlines threathening uncertainty among the public and taking the loss of innocence. A good visual analysis of terrorist attacks is essential to (1) discover global terrorism trends, (2) unveil hidden relationships among terrorist in the network through their attacks and (3) ascertain the impact of fatalities and losses created.
 
-1.  
-
-2.  
-
-3.  
+The team aims to use open-source government data to provide free-to-use visualisation tools that is suitable especially for the Defence sector to develop effective combating strategies against terrorism.
 
 # Objectives
 
