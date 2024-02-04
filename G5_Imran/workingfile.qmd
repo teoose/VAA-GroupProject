@@ -1,3 +1,53 @@
 ---
-title: "Working File"
+title: "Imran's page"
+date: February 4, 2024
+date-modified: "last-modified"
+toc: true
+execute: 
+  eval: true
+  echo: true
+  warning: false
 ---
+
+# Getting Started
+
+## Loading R package
+
+```{r}
+pacman::p_load(tidyverse, ggplot2, plotly, dplyr)
+
+```
+
+```{r}
+# Load necessary libraries
+library(ggplot2)
+library(plotly)
+library(dplyr)
+
+# Read the dataset
+data <- read.csv("data/data_filtered_analysis.csv")
+
+# Prepare the data by grouping and summarizing
+data_prepared <- data %>%
+  group_by(country_txt) %>%
+  summarise(Incidents = n(),
+            Kills = sum(nkill, na.rm = TRUE)) %>%
+  ungroup()
+```
+
+```{r}
+# Create the bubble plot
+p <- ggplot(data_prepared, aes(x = Incidents, y = Kills, size = Kills, color = country_txt)) +
+  geom_point(alpha = 0.7) +
+  scale_size(range = c(1, 20)) + # Adjust this range based on your data to make the plot look better
+  theme_minimal() +
+  labs(title = "Terrorism Incidents vs. Casualties by Country, 1970 - 2023",
+       x = "Number of Incidents",
+       y = "Number of Casualties") +
+  theme(legend.position = "none") # Optional: Adjust or remove based on preference
+
+p_interactive <- ggplotly(p, tooltip = c("country_txt", "Incidents", "Kills"))
+
+# Print the interactive plot
+p_interactive
+```
