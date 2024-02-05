@@ -13,7 +13,7 @@ website:
     
     right:
       - text: "Home"
-        href: index.qmd
+        href: "home.html"
       - text: "Shiny App"
         href: ".html"
       - text: "User Guide"
