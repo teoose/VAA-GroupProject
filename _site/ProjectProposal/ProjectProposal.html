@@ -186,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="motivation" class="level1">
 <h1>Motivation</h1>
 <p>Terrorism, especially coordinated attacks targeting innocent civilians, have been a constant in our lives, threatening the public both physically and psychologically. A good visual analysis of terrorist attacks is essential to help (1) discover global terrorism trends, (2) unveil hidden relationships among terrorist networks through their attacks and (3) ascertain the impact of fatalities and losses.</p>
-<p>The team aims to use open-source data which includes information on terrorist events globally to provide easy-to-use and insightful visualization tools that can be especially suitable for Defence and Security sectors to develop effective counter terrorism measures and strategies.</p>
+<p>The team aims to use open-source data which includes information on terrorist events globally to provide easy-to-use and insightful visualisation tools that can be especially suitable for Defence and Security sectors to develop effective counter terrorism measures and strategies.</p>
 </section>
 <section id="objectives" class="level1">
 <h1>Objectives</h1>
@@ -229,64 +229,82 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="prototype-sketches" class="level1">
 <h1>Prototype Sketches</h1>
-<p>The following sketches were drawn to conceptualize our thoughts and discussions on the layout of the Shiny app along with its various functions.</p>
-<p>These will subsequently be refined as we further codify and render our graphs and application.</p>
-<p>The various sections of our app consists of:-</p>
+<p>The following sketches were drawn to conceptualise our thoughts and discussions on the layout of the Shiny app along with its various functions.&nbsp;</p>
+<p>These will subsequently be refined as we further codify and render our graphs and application.&nbsp;</p>
+<p>The various sections of our app consists of:-&nbsp;</p>
 <ol type="1">
-<li><p>Landing page - to visually summarize the impact of Global Terrorism incidents till date</p></li>
-<li><p>Global trends- to examine the trends over time and deep dive into the nature of events</p></li>
-<li><p>Country statistics - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism on that locality</p></li>
-<li><p>Distribution analysis - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks</p></li>
-<li><p>Confirmatory Analysis - to visualize and examine/test for relationships, associations and correlations etc</p></li>
+<li>Landing page - to visually summarise the impact of Global Terrorism incidents till date&nbsp;</li>
+</ol>
+<!-- -->
+<ol start="2" type="1">
+<li>Global trends- to examine the trends over time and deep dive into the nature of events&nbsp;</li>
+</ol>
+<!-- -->
+<ol start="3" type="1">
+<li>Country statistics - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism in that locality&nbsp;</li>
+</ol>
+<!-- -->
+<ol start="4" type="1">
+<li>Distribution analysis - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks&nbsp;</li>
+</ol>
+<!-- -->
+<ol start="5" type="1">
+<li>Confirmatory Analysis - to visualise and examine/ test for relationships, associations and correlations etc&nbsp;</li>
 </ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Landing Page - Visualizing the Global Impact</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Global Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Country/Region Statistics and Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Distribution Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Confirmatory Data Analysis</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Landing Page</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Global Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Country Statistics</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Distribution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Confirmatory</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><img src="images/clipboard-4114247711.png" class="img-fluid"></p>
+<p>This tab will serve as a “landing page” to inform and summarise the global impact till date.&nbsp;</p>
+<p>Proposed key features on the page include:&nbsp;</p>
 <ul>
-<li><p>Serves as a “Cover page” to inform and summarize the global impact till date.</p></li>
-<li><p>World map will be rendered in different colour intensity to identify the countries/regions most impacted.</p></li>
-<li><p>We can use existing latitude/longitude data to render the locations of events.</p></li>
-<li><p>Further interactivity can be implemented with the tooltip.</p></li>
+<li><p>World map to identify the countries/regions most impacted and location of events, based on different colour intensity, with the use of Latitude/ Longitude variables.&nbsp;</p></li>
+<li><p>Interactivity elements will be implemented with the tooltip information such as Country, Total Counts on Attack/ Killed/ Wounded etc.&nbsp;</p></li>
 </ul>
+<p><img src="images/clipboard-4114247711.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p><img src="images/clipboard-2416809596.png" class="img-fluid"></p>
-<p>Dash board to identify the countries most affected, groups with most attacks, type of weapons used, forms of attacks etc.</p>
-<p>The purpose of this page is to show changes over time and to deep dive into categories of events</p>
-<p>Type of charts that we can use:-</p>
+<p>This tab will serve as the dashboard in the R Shiny application that will identify the most affected countries, groups with most attacks, types of weapons used, forms of attacks etc.&nbsp;</p>
+<p>Proposed key features on the page include:&nbsp;</p>
 <ul>
-<li><p>Interactive or Animated Bubble plot that can show the countries most affected over time. Use of time slider or play button for animated graph</p></li>
-<li><p>Line chart to plot how the number of attacks, casualties, wounded have changed over time. Use of time slider or play button for animated graph</p></li>
-<li><p>Bar chart to show the top terror groups</p></li>
-<li><p>Word cloud to visualize the motives behind the attacks</p></li>
-<li><p>Global map to show the changes in terrorism “hotspots” over time</p></li>
+<li><p>Interactive or Animated Bubble plot that shows the most affected countries over time, with the use of time slider or play button for animated graph.&nbsp;</p></li>
+<li><p>Line chart to plot how the number of attacks, casualties, wounded have changed over time, with the use of time slider or play button for animated graph.&nbsp;</p></li>
 </ul>
+<!-- -->
+<ul>
+<li><p>Bar chart to show the top terror groups.&nbsp;</p></li>
+<li><p>Word cloud to visualise the motives behind the attacks.&nbsp;</p></li>
+<li><p>World map to show the changes in terrorism “hotspots” over time.&nbsp;</p></li>
+<li><p>Interactivity elements will be implemented with the tooltip information such as Country, Counts on Total Attack/ Total Killed/ Total Wounded etc.&nbsp;</p></li>
+</ul>
+<p><img src="images/clipboard-2416809596.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<p><img src="images/clipboard-2405250291.png" class="img-fluid"></p>
+<p>This tab will serve as a continuation from the ‘Global Trends’ tab.&nbsp;&nbsp;</p>
+<p>Proposed key features on the page include:&nbsp;</p>
 <ul>
-<li><p>This page adds continuity from previous page of global trends.</p></li>
-<li><p>Upon identifying a country/region most or least impacted by terrorism, users can further examine in more detail, that particular country or region</p></li>
+<li><p>World map, line/ bar chart and word cloud will show the details at regional level.&nbsp;</p></li>
+<li><p>Users will be able to select from the dropdown list for the country/ region that they would want to examine in more detail.&nbsp;</p></li>
 </ul>
+<p><img src="images/clipboard-2405250291.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
-<p><img src="images/clipboard-2444559577.png" class="img-fluid"></p>
+<p>This tab will display the distribution of Terror events based on the different categorical variables such as Target/ Weapon/ Attack/ Region etc.&nbsp;</p>
+<p>Proposed key features on the page include:&nbsp;</p>
 <ul>
-<li><p>Users can examine the distribution of Terror events against categorical variables.</p></li>
-<li><p>For example, Terror events across regions, attack types, targets, weapons etc</p></li>
+<li>Bar charts and ridge density plots to show the distribution of the terror events based on the different variables.&nbsp;</li>
 </ul>
+<p><img src="images/clipboard-2444559577.png" class="img-fluid"></p>
 </div>
 <div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
-<p><img src="images/clipboard-3511639701.png" class="img-fluid"></p>
-<p>In this page, we will examine and visualize relationships, associations and correlations.</p>
-<p>For example:-</p>
+<p>This tab will examine and visualise the relationships, associations and correlations of different variables.&nbsp;</p>
+<p>Proposed key features on the page include:&nbsp;</p>
 <ul>
-<li><p>Associations between categorical variables eg: ‘Modus operandi’ Vs Targets types,</p></li>
-<li><p>Examine if there is any seasonality in attacks,</p></li>
-<li><p>Additional plots to show tests of correlation, normality, hypothesis testing etc</p></li>
+<li><p>Association tests between categorical variables eg: ‘Modus operandi’ Vs Targets types.&nbsp;</p></li>
+<li><p>Time series seasonality test to examine if there is any seasonal element in attacks.&nbsp;</p></li>
+<li><p>Statistical test plots such as tests of correlation, multicollinearity, normality testing, etc.&nbsp;</p></li>
 </ul>
+<p><img src="images/clipboard-3511639701.png" class="img-fluid"></p>
 </div>
 </div>
 </div>
