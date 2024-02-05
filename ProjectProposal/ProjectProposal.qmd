@@ -106,7 +106,7 @@ Type of charts that we can use:-
 
 -   Bar chart to show the top terror groups
 
--   World cloud to visualize the motive behind the attacks
+-   Word cloud to visualize the motives behind the attacks
 
 -   Global map to show the changes in terrorism "hotspots" over time
 
