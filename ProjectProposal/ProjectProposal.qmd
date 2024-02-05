@@ -11,7 +11,7 @@ execute:
 
 Authors: Imran, Suan Ern, Zachary Wong
 
-![](images/GTD Heatmap_2020_Thumb.png)
+![](images/GTD%20Heatmap_2020_Thumb.png)
 
 # Motivation
 
