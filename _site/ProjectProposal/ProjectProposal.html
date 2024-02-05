@@ -177,18 +177,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 <p>Authors: Imran, Suan Ern, Zachary Wong</p>
-<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD <img src="images/GTD Heatmap_2020_Thumb.png" class="img-fluid"> ======= <img src="images/GTD Heatmap_2020_Thumb.png" class="img-fluid" data-fig-align="left" alt="Image Source: University of Maryland"> &gt;&gt;&gt;&gt;&gt;&gt;&gt; de1784f48c23e6f6070f1914ac25bd5c526bc15a</p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/GTD Heatmap_2020_Thumb.png" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Image Source: University of Maryland</figcaption>
+</figure>
+</div>
 <section id="motivation" class="level1">
 <h1>Motivation</h1>
-<p>Terrorism, armed attacks, supremacist, etc have been making the headlines threathening uncertainty among the public and taking the loss of innocence. A good visual analysis of terrorist attacks is essential to (1) discover global terrorism trends, (2) unveil hidden relationships among terrorist in the network through their attacks and (3) ascertain the impact of fatalities and losses created.</p>
-<p>The team aims to use open-source government data to provide free-to-use visualisation tools that is suitable especially for the Defence sector to develop effective combating strategies against terrorism.</p>
+<p>Terrorism, especially coordinated attacks targeting innocent civilians, have been a constant in our lives, threatening the public both physically and psychologically. A good visual analysis of terrorist attacks is essential to help (1) discover global terrorism trends, (2) unveil hidden relationships among terrorist networks through their attacks and (3) ascertain the impact of fatalities and losses.</p>
+<p>The team aims to use open-source data which includes information on terrorist events globally to provide easy-to-use and insightful visualization tools that can be especially suitable for Defence and Security sectors to develop effective counter terrorism measures and strategies.</p>
 </section>
 <section id="objectives" class="level1">
 <h1>Objectives</h1>
-<p>The objective of the project is to:</p>
+<p>The objective of this project is to:</p>
 <ol type="1">
-<li>examine open-source government data on terrorist events worldwide and derive useful variables that affect the international terrorist incidents, and</li>
-<li>build a web-enabled interactive visual analytics application by using R Shiny based on World Terrorism Database.</li>
+<li>Examine open-source data on terrorist events worldwide (The Global Terrorism Database(GTD)) and derive useful insights on the factors and conditions that may affect international terrorist incidents, and</li>
+<li>Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database(GTD).</li>
 </ol>
 </section>
 <section id="data" class="level1">
@@ -222,9 +227,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol></li>
 </ol>
 </section>
-<section id="prototype" class="level1">
-<h1>Prototype</h1>
-<p>&lt;insert text&gt;</p>
+<section id="prototype-sketches" class="level1">
+<h1>Prototype Sketches</h1>
+<p>The following sketches were drawn to conceptualize our thoughts and discussions on the layout of the Shiny app along with its various functions.</p>
+<p>These will subsequently be refined as we further codify and render our graphs and application.</p>
+<p>The various sections of our app consists of:-</p>
+<ol type="1">
+<li><p>Landing page - to visually summarize the impact of Global Terrorism incidents till date</p></li>
+<li><p>Global trends- to examine the trends over time and deep dive into the nature of events</p></li>
+<li><p>Country statistics - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism on that locality</p></li>
+<li><p>Distribution analysis - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks</p></li>
+<li><p>Confirmatory Analysis - to visualize and examine/test for relationships, associations and correlations etc</p></li>
+</ol>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Landing Page - Visualizing the Global Impact</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Global Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Country/Region Statistics and Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Distribution Analysis</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Confirmatory Data Analysis</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p><img src="images/clipboard-4114247711.png" class="img-fluid"></p>
+<ul>
+<li><p>Serves as a “Cover page” to inform and summarize the global impact till date.</p></li>
+<li><p>World map will be rendered in different colour intensity to identify the countries/regions most impacted.</p></li>
+<li><p>We can use existing latitude/longitude data to render the locations of events.</p></li>
+<li><p>Further interactivity can be implemented with the tooltip.</p></li>
+</ul>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p><img src="images/clipboard-2416809596.png" class="img-fluid"></p>
+<p>Dash board to identify the countries most affected, groups with most attacks, type of weapons used, forms of attacks etc.</p>
+<p>The purpose of this page is to show changes over time and to deep dive into categories of events</p>
+<p>Type of charts that we can use:-</p>
+<ul>
+<li><p>Interactive or Animated Bubble plot that can show the countries most affected over time. Use of time slider or play button for animated graph</p></li>
+<li><p>Line chart to plot how the number of attacks, casualties, wounded have changed over time. Use of time slider or play button for animated graph</p></li>
+<li><p>Bar chart to show the top terror groups</p></li>
+<li><p>World cloud to visualize the motive behind the attacks</p></li>
+<li><p>Global map to show the changes in terrorism “hotspots” over time</p></li>
+</ul>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p><img src="images/clipboard-2405250291.png" class="img-fluid"></p>
+<ul>
+<li><p>This page adds continuity from previous page of global trends.</p></li>
+<li><p>Upon identifying a country/region most or least impacted by terrorism, users can further examine in more detail, that particular country or region</p></li>
+</ul>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<p><img src="images/clipboard-2444559577.png" class="img-fluid"></p>
+<ul>
+<li><p>Users can examine the distribution of Terror events against categorical variables.</p></li>
+<li><p>For example, Terror events across regions, attack types, targets, weapons etc</p></li>
+</ul>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<p><img src="images/clipboard-3511639701.png" class="img-fluid"></p>
+<p>In this page, we will examine and visualize relationships, associations and correlations.</p>
+<p>For example:-</p>
+<ul>
+<li><p>Associations between categorical variables eg: ‘Modus operandi’ Vs Targets types,</p></li>
+<li><p>Examine if there is any seasonality in attacks,</p></li>
+<li><p>Additional plots to show tests of correlation, normality, hypothesis testing etc</p></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
 <section id="r-packages" class="level1">
 <h1>R Packages</h1>

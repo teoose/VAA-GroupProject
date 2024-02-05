@@ -11,24 +11,20 @@ execute:
 
 Authors: Imran, Suan Ern, Zachary Wong
 
-<<<<<<< HEAD
-![](images/GTD%20Heatmap_2020_Thumb.png)
-=======
 ![Image Source: University of Maryland](images/GTD%20Heatmap_2020_Thumb.png){fig-align="left"}
->>>>>>> de1784f48c23e6f6070f1914ac25bd5c526bc15a
 
 # Motivation
 
-Terrorism, armed attacks, supremacist, etc have been making the headlines threathening uncertainty among the public and taking the loss of innocence. A good visual analysis of terrorist attacks is essential to (1) discover global terrorism trends, (2) unveil hidden relationships among terrorist in the network through their attacks and (3) ascertain the impact of fatalities and losses created.
+Terrorism, especially coordinated attacks targeting innocent civilians, have been a constant in our lives, threatening the public both physically and psychologically. A good visual analysis of terrorist attacks is essential to help (1) discover global terrorism trends, (2) unveil hidden relationships among terrorist networks through their attacks and (3) ascertain the impact of fatalities and losses.
 
-The team aims to use open-source government data to provide free-to-use visualisation tools that is suitable especially for the Defence sector to develop effective combating strategies against terrorism.
+The team aims to use open-source data which includes information on terrorist events globally to provide easy-to-use and insightful visualization tools that can be especially suitable for Defence and Security sectors to develop effective counter terrorism measures and strategies.
 
 # Objectives
 
-The objective of the project is to:
+The objective of this project is to:
 
-1.  examine open-source government data on terrorist events worldwide and derive useful variables that affect the international terrorist incidents, and
-2.  build a web-enabled interactive visual analytics application by using R Shiny based on World Terrorism Database.
+1.  Examine open-source data on terrorist events worldwide (The Global Terrorism Database(GTD)) and derive useful insights on the factors and conditions that may affect international terrorist incidents, and
+2.  Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database(GTD).
 
 # Data
 
@@ -63,9 +59,87 @@ For this project, the following approach will be taken by the team:
 
     4.  Oneway ANOVA Test: ggbetweenstats() method
 
-# Prototype
+# Prototype Sketches
 
-\<insert text\>
+The following sketches were drawn to conceptualize our thoughts and discussions on the layout of the Shiny app along with its various functions.
+
+These will subsequently be refined as we further codify and render our graphs and application.
+
+The various sections of our app consists of:-
+
+1.  Landing page - to visually summarize the impact of Global Terrorism incidents till date
+
+2.  Global trends- to examine the trends over time and deep dive into the nature of events
+
+3.  Country statistics - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism on that locality
+
+4.  Distribution analysis - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks
+
+5.  Confirmatory Analysis - to visualize and examine/test for relationships, associations and correlations etc
+
+::: panel-tabset
+## Landing Page - Visualizing the Global Impact
+
+![](images/clipboard-4114247711.png)
+
+-   Serves as a "Cover page" to inform and summarize the global impact till date.
+
+-   World map will be rendered in different colour intensity to identify the countries/regions most impacted.
+
+-   We can use existing latitude/longitude data to render the locations of events.
+
+-   Further interactivity can be implemented with the tooltip.
+
+## Global Trends 
+
+![](images/clipboard-2416809596.png)
+
+Dash board to identify the countries most affected, groups with most attacks, type of weapons used, forms of attacks etc.
+
+The purpose of this page is to show changes over time and to deep dive into categories of events
+
+Type of charts that we can use:-
+
+-   Interactive or Animated Bubble plot that can show the countries most affected over time. Use of time slider or play button for animated graph
+
+-   Line chart to plot how the number of attacks, casualties, wounded have changed over time. Use of time slider or play button for animated graph
+
+-   Bar chart to show the top terror groups
+
+-   World cloud to visualize the motive behind the attacks
+
+-   Global map to show the changes in terrorism "hotspots" over time
+
+## Country/Region Statistics and Analysis 
+
+![](images/clipboard-2405250291.png)
+
+-   This page adds continuity from previous page of global trends.
+
+-   Upon identifying a country/region most or least impacted by terrorism, users can further examine in more detail, that particular country or region
+
+## Distribution Analysis 
+
+![](images/clipboard-2444559577.png)
+
+-   Users can examine the distribution of Terror events against categorical variables.
+
+-   For example, Terror events across regions, attack types, targets, weapons etc
+
+## Confirmatory Data Analysis 
+
+![](images/clipboard-3511639701.png)
+
+In this page, we will examine and visualize relationships, associations and correlations.
+
+For example:-
+
+-   Associations between categorical variables eg: 'Modus operandi' Vs Targets types,
+
+-   Examine if there is any seasonality in attacks,
+
+-   Additional plots to show tests of correlation, normality, hypothesis testing etc
+:::
 
 # R Packages
 
