@@ -24,14 +24,11 @@ The team aims to use open-source data which includes information on terrorist ev
 The objective of this project is to:
 
 1.  Examine open-source data on terrorist events worldwide (The Global Terrorism Database(GTD)) and derive useful insights on the factors and conditions that may affect international terrorist incidents, and
-2.  Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database(GTD).
+2.  Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database (GTD).
 
 # Data
 
-The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"}. The dataset consist of XX variables and XX datapoints. The team intends to manipulate the dataset as follows:
-
-1.  Create new columns........ to achieve..
-2.  Filter dataset... to achieve..
+The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"} that holds 50 decades (i.e. Year 1970 to Year 2020) of attack events that happened in 203 countries. The original dataset consists of 209,706 observations and 135 variables. Given the large dataset, the team will filter the dataset to eliminate unnecessary data to ensure quality of data used is pertinent to project objective.
 
 # Methodology & Analytical Approach
 
@@ -41,23 +38,23 @@ For this project, the following approach will be taken by the team:
 
 2.  **Exploratory Data Analysis via Data Visualisation Methods:** Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:
 
-    1.  Time-series bar/ line chart and bubble plot
+    a.  Time-series bar/ line chart and bubble plot
 
-    2.  Geospatial heatmaps and hotspot maps
+    b.  Geospatial heatmaps and hotspot maps
 
 3.  **Confirmatory Data Analysis via Statistical Methods:** Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.
 
-    1.  Correlation test:
+    a.  Correlation test:
 
         -   Correlation web plot, or
 
         -   Significant Test of Correlation: ggscatterstats()
 
-    2.  Model Diagnostic: checking for multicollinearity
+    b.  Model Diagnostic: checking for multicollinearity
 
-    3.  Model Diagnostic: checking normality assumption
+    c.  Model Diagnostic: checking normality assumption
 
-    4.  Oneway ANOVA Test: ggbetweenstats() method
+    d.  Oneway ANOVA Test: ggbetweenstats() method
 
 # Prototype Sketches
 
@@ -67,30 +64,18 @@ These will subsequently be refined as we further codify and render our graphs an
 
 The various sections of our app consists of:- 
 
-1.  Landing page - to visually summarise the impact of Global Terrorism incidents till date 
+1.  **Landing page** - to visually summarise the impact of Global Terrorism incidents till date 
 
-```{=html}
-<!-- -->
-```
-2.  Global trends- to examine the trends over time and deep dive into the nature of events 
+2.  **Global trends**- to examine the trends over time and deep dive into the nature of events 
 
-```{=html}
-<!-- -->
-```
-3.  Country statistics - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism in that locality 
+3.  **Country statistics** - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism in that locality 
 
-```{=html}
-<!-- -->
-```
-4.  Distribution analysis - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks 
+4.  **Distribution analysis** - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks 
 
-```{=html}
-<!-- -->
-```
-5.  Confirmatory Analysis - to visualise and examine/ test for relationships, associations and correlations etc 
+5.  **Confirmatory Analysis** - to visualise and examine/ test for relationships, associations and correlations etc 
 
 ::: panel-tabset
-## Landing Page 
+## Landing Page
 
 This tab will serve as a “landing page” to inform and summarise the global impact till date. 
 
@@ -102,7 +87,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-4114247711.png)
 
-## Global Trends 
+## Global Trends
 
 This tab will serve as the dashboard in the R Shiny application that will identify the most affected countries, groups with most attacks, types of weapons used, forms of attacks etc. 
 
@@ -112,9 +97,6 @@ Proposed key features on the page include: 
 
 -   Line chart to plot how the number of attacks, casualties, wounded have changed over time, with the use of time slider or play button for animated graph. 
 
-```{=html}
-<!-- -->
-```
 -   Bar chart to show the top terror groups. 
 
 -   Word cloud to visualise the motives behind the attacks. 
@@ -125,7 +107,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-2416809596.png)
 
-## Country Statistics 
+## Country Statistics
 
 This tab will serve as a continuation from the ‘Global Trends’ tab.  
 
@@ -137,7 +119,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-2405250291.png)
 
-## Distribution 
+## Distribution
 
 This tab will display the distribution of Terror events based on the different categorical variables such as Target/ Weapon/ Attack/ Region etc. 
 
@@ -147,7 +129,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-2444559577.png)
 
-## Confirmatory 
+## Confirmatory
 
 This tab will examine and visualise the relationships, associations and correlations of different variables. 
 

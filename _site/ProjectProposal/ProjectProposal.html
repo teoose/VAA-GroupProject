@@ -8,7 +8,7 @@
 
 <meta name="dcterms.date" content="2024-02-04">
 
-<title>Global Terrorism - Decoding Chaos in Colours</title>
+<title>Decoding Chaos - Decoding Chaos in Colours</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -105,6 +105,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../images/Nav_Logo4.png" alt="" class="navbar-logo">
+    </a>
+  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -167,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 5, 2024</p>
+      <p class="date-modified">February 6, 2024</p>
     </div>
   </div>
     
@@ -193,16 +198,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The objective of this project is to:</p>
 <ol type="1">
 <li>Examine open-source data on terrorist events worldwide (The Global Terrorism Database(GTD)) and derive useful insights on the factors and conditions that may affect international terrorist incidents, and</li>
-<li>Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database(GTD).</li>
+<li>Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database (GTD).</li>
 </ol>
 </section>
 <section id="data" class="level1">
 <h1>Data</h1>
-<p>The project will examine the Global Terrorism Database™ (GTD) from <a href="https://www.start.umd.edu/gtd" target="_blank">University of Maryland</a>. The dataset consist of XX variables and XX datapoints. The team intends to manipulate the dataset as follows:</p>
-<ol type="1">
-<li>Create new columns…….. to achieve..</li>
-<li>Filter dataset… to achieve..</li>
-</ol>
+<p>The project will examine the Global Terrorism Database™ (GTD) from <a href="https://www.start.umd.edu/gtd" target="_blank">University of Maryland</a> that holds 50 decades (i.e.&nbsp;Year 1970 to Year 2020) of attack events that happened in 203 countries. The original dataset consists of 209,706 observations and 135 variables. Given the large dataset, the team will filter the dataset to eliminate unnecessary data to ensure quality of data used is pertinent to project objective.</p>
 </section>
 <section id="methodology-analytical-approach" class="level1">
 <h1>Methodology &amp; Analytical Approach</h1>
@@ -210,12 +211,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li><p><strong>Data Preparation:</strong> Clean the dataset by handling missing values, removing irrelevant variables, filtering variables and encoding categorical variables if necessary.</p></li>
 <li><p><strong>Exploratory Data Analysis via Data Visualisation Methods:</strong> Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:</p>
-<ol type="1">
+<ol type="a">
 <li><p>Time-series bar/ line chart and bubble plot</p></li>
 <li><p>Geospatial heatmaps and hotspot maps</p></li>
 </ol></li>
 <li><p><strong>Confirmatory Data Analysis via Statistical Methods:</strong> Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g.&nbsp;strength of relationships between variables) and make statistical observations under uncertainty.</p>
-<ol type="1">
+<ol type="a">
 <li><p>Correlation test:</p>
 <ul>
 <li><p>Correlation web plot, or</p></li>
@@ -233,23 +234,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>These will subsequently be refined as we further codify and render our graphs and application.&nbsp;</p>
 <p>The various sections of our app consists of:-&nbsp;</p>
 <ol type="1">
-<li>Landing page - to visually summarise the impact of Global Terrorism incidents till date&nbsp;</li>
-</ol>
-<!-- -->
-<ol start="2" type="1">
-<li>Global trends- to examine the trends over time and deep dive into the nature of events&nbsp;</li>
-</ol>
-<!-- -->
-<ol start="3" type="1">
-<li>Country statistics - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism in that locality&nbsp;</li>
-</ol>
-<!-- -->
-<ol start="4" type="1">
-<li>Distribution analysis - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks&nbsp;</li>
-</ol>
-<!-- -->
-<ol start="5" type="1">
-<li>Confirmatory Analysis - to visualise and examine/ test for relationships, associations and correlations etc&nbsp;</li>
+<li><p><strong>Landing page</strong> - to visually summarise the impact of Global Terrorism incidents till date&nbsp;</p></li>
+<li><p><strong>Global trends</strong>- to examine the trends over time and deep dive into the nature of events&nbsp;</p></li>
+<li><p><strong>Country statistics</strong> - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism in that locality&nbsp;</p></li>
+<li><p><strong>Distribution analysis</strong> - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks&nbsp;</p></li>
+<li><p><strong>Confirmatory Analysis</strong> - to visualise and examine/ test for relationships, associations and correlations etc&nbsp;</p></li>
 </ol>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Landing Page</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Global Trends</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Country Statistics</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">Distribution</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">Confirmatory</a></li></ul>
@@ -269,9 +258,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li><p>Interactive or Animated Bubble plot that shows the most affected countries over time, with the use of time slider or play button for animated graph.&nbsp;</p></li>
 <li><p>Line chart to plot how the number of attacks, casualties, wounded have changed over time, with the use of time slider or play button for animated graph.&nbsp;</p></li>
-</ul>
-<!-- -->
-<ul>
 <li><p>Bar chart to show the top terror groups.&nbsp;</p></li>
 <li><p>Word cloud to visualise the motives behind the attacks.&nbsp;</p></li>
 <li><p>World map to show the changes in terrorism “hotspots” over time.&nbsp;</p></li>
