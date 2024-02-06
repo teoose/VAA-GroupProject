@@ -2,15 +2,14 @@ project:
   type: website
 
 website:
-  title: "Global Terrorism"
+  title: "Decoding Chaos"
   page-navigation: true
   back-to-top-navigation: true
   sidebar: false
   navbar:
-    logo: ""
     title: false
+    logo: "images/Nav_Logo4.png"
     search: true
-    
     right:
       - text: "Home"
         href: "home.html"
