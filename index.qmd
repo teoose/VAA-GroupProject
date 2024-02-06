@@ -1,5 +1,1 @@
----
-title: "VAA-GroupProject"
----
-
-Work in progress
+![](images/WIP_Index2.png){fig-align="center" width="50%"}

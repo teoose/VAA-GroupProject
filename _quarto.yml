@@ -5,13 +5,14 @@ website:
   title: "Decoding Chaos"
   page-navigation: true
   back-to-top-navigation: true
+  search: true
   sidebar: false
   navbar:
     logo: "images/Nav_Logo4.png"
     title: false
     right:
       - text: "Home"
-        href: "home.html"
+        href: index.qmd
       - text: "Shiny App"
         href: ".html"
       - text: "User Guide"
