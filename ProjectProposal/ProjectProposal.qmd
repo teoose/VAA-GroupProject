@@ -168,8 +168,6 @@ Our team intends to use the following R packages to run the R Shiny Application:
 
 -   *RColorBrewer*: an R package that provide various colour schemes and colour palettes.
 
--   *patchwork*: an R package for preparing composite figure created using ggplot2.
-
 -   *DT*: an R interface to the JavaScript library DataTables that create interactive table on html page.
 
 # Project Schedule
