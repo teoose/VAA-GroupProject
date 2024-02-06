@@ -7,9 +7,8 @@ website:
   back-to-top-navigation: true
   sidebar: false
   navbar:
-    title: false
     logo: "images/Nav_Logo4.png"
-    search: true
+    title: false
     right:
       - text: "Home"
         href: "home.html"
