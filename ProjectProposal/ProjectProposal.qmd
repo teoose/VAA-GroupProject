@@ -34,15 +34,81 @@ The project will examine the Global Terrorism Database™ (GTD) from [University
 
 For this project, the following approach will be taken by the team:
 
-1.  **Data Preparation:** Clean the dataset by handling missing values, removing irrelevant variables, filtering variables and encoding categorical variables if necessary.
+1.  **Data Preparation:** Clean the dataset by removing irrelevant variables, filtering variables and encoding categorical variables if necessary.
 
-2.  **Exploratory Data Analysis via Data Visualisation Methods:** Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:
+    -   The table below shows the variables that we have selected to maintain.
+
+    -   For detailed description of the variables, please refer to the Code Book in the reference section.
+
+| Column Variable    | Column Number | Column Description                                                                                                        |
+|----------------|----------------|------------------------------------|
+| eventid            | 1             | ID labelled by GTD on each incident                                                                                       |
+| iyear              | 2             | Year of Incident                                                                                                          |
+| imonth             | 3             | Month of Incident                                                                                                         |
+| iday               | 4             | Day of Incident                                                                                                           |
+| extended           | 6             | Did the event last more than 24 hours                                                                                     |
+| country_txt        | 9             | Country where incident occurred                                                                                           |
+| region_txt         | 11            | Region where incident occurred                                                                                            |
+| provstate          | 12            | Province or State which incident occurred                                                                                 |
+| city               | 13            | City, village or town where incident occurred                                                                             |
+| latitude           | 14            | self-explanatory                                                                                                          |
+| longitude          | 15            | self-explanatory                                                                                                          |
+| vicinity           | 17            | Did even occur in immediate vicinity of the city                                                                          |
+| summary            | 19            | Incident summary                                                                                                          |
+| crit1              | 20            | Political, economic, religious or social goal                                                                             |
+| crit2              | 21            | Intention to coerce, intimidate or publicize to larger audience(s)                                                        |
+| crit3              | 22            | Outside international humanitarian law                                                                                    |
+| doubtterr          | 23            | Any doubt if incident is terrorism related                                                                                |
+| alternative_txt    | 25            | Variable identifies the most likely categorization of incident other than terrorism                                       |
+| multiple           | 26            | Is attack part of a multiple incident                                                                                     |
+| success            | 27            | Whether attack was successful                                                                                             |
+| suicide            | 28            | Was it a suicide attack                                                                                                   |
+| attacktype1_txt    | 30            | General method of attack based on broad class of tactics used                                                             |
+| targtype1_txt      | 36            | General type of target/victim                                                                                             |
+| targsubtype1_txt   | 38            | Specific target category and level of designation of target type                                                          |
+| corp1              | 39            | Name of corporate entity or government agency targeted                                                                    |
+| target1            | 40            | Specific person, building or installation etc                                                                             |
+| natlty1_txt        | 42            | Nationality of target attacked                                                                                            |
+| gname              | 59            | Perpetrator group name                                                                                                    |
+| motive             | 65            | When report explicitly mentions a specific motive                                                                         |
+| individual         | 69            | Whether attack was done by one or more individuals affiliated with a group or organization                                |
+| nperps             | 70            | Number of perpetrators                                                                                                    |
+| nperpcap           | 71            | Number of perpetrators captured                                                                                           |
+| claimed            | 72            | Whether a group or person claimed the attack                                                                              |
+| claimmode_txt      | 74            | How the person or group claimed the attack                                                                                |
+| compclaim          | 81            | Any competing claims for the attack                                                                                       |
+| weaptype1_txt      | 83            | Main weapon type used in incident                                                                                         |
+| weapsubtype1_txt   | 85            | Sub weapon type used in incident                                                                                          |
+| weapdetail         | 98            | Any pertinent information on type of weapon used in the incident                                                          |
+| nkill              | 99            | Total number of fatalities                                                                                                |
+| nkillter           | 102           | Number of perpetrator fatalities                                                                                          |
+| nwound             | 103           | Number of wounded                                                                                                         |
+| nwoundte           | 104           | Number of perpetrators wounded                                                                                            |
+| property           | 105           | Any property damaged as a result of incident                                                                              |
+| propextent_txt     | 107           | Extent of property damaged                                                                                                |
+| propvalue          | 108           | Value of property damaged (in USD)                                                                                        |
+| ishostkid          | 110           | Whether victims were taken hostage or kidnapped                                                                           |
+| nhostkid           | 111           | Number of victims taken hostage or kidnapped                                                                              |
+| nhours             | 113           | Number of hours taken hostage or kidnapped                                                                                |
+| ndays              | 114           | Number of days taken hostage or kidnapped                                                                                 |
+| ransom             | 117           | Any ransom demanded                                                                                                       |
+| ransomamt          | 118           | Ransom amount demanded (in USD)                                                                                           |
+| ransompaid         | 120           | Was ransom paid                                                                                                           |
+| hostkidoutcome_txt | 124           | Eventual fate of hostages or kidnapped victims                                                                            |
+| addnotes           | 126           | Any additional relevant details on the attack                                                                             |
+| INT_LOG            | 131           | Whether attack was logistically international                                                                             |
+| INT_IDEO           | 132           | Whether attack was ideologically international                                                                            |
+| INT_MISC           | 133           | When the attack was international but cannot be classified under logistical or ideological                                |
+| INT_ANY            | 134           | whether attack was any of the above (internationally classified)                                                          |
+| related            | 135           | If the attack is part of a coordinated or multi-part incident, all incidents will be listed here and separated by commas. |
+
+1.  **Exploratory Data Analysis via Data Visualisation Methods:** Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:
 
     a.  Time-series bar/ line chart and bubble plot
 
     b.  Geospatial heatmaps and hotspot maps
 
-3.  **Confirmatory Data Analysis via Statistical Methods:** Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.
+2.  **Confirmatory Data Analysis via Statistical Methods:** Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.
 
     a.  Correlation test:
 
