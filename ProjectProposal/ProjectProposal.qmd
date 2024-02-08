@@ -41,7 +41,7 @@ For this project, the following approach will be taken by the team:
     -   For detailed description of the variables, please refer to the Code Book in the reference section.
 
 | Column Variable    | Column Number | Column Description                                                                                                        |
-|----------------|----------------|------------------------------------|
+|--------------------|---------------|---------------------------------------------------------------------------------------------------------------------------|
 | eventid            | 1             | ID labelled by GTD on each incident                                                                                       |
 | iyear              | 2             | Year of Incident                                                                                                          |
 | imonth             | 3             | Month of Incident                                                                                                         |

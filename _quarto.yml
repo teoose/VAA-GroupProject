@@ -21,6 +21,8 @@ website:
         href: "ProjectProposal/ProjectProposal.html"
       - text: "Prototype"
         href: "Prototype/Prototype.html"
+      - text: "References"
+        href: "Codebook.html"
   page-footer:
     right: 
       - text: "©2024!"
