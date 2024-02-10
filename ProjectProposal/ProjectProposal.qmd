@@ -28,7 +28,7 @@ The objective of this project is to:
 
 # Data
 
-The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"} that holds 50 decades (i.e. Year 1970 to Year 2020) of attack events that happened in 203 countries. The original dataset consists of 209,706 observations and 135 variables. Given the large dataset, the team will filter the dataset to eliminate unnecessary data to ensure quality of data used is pertinent to project objective.
+The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"} that holds 5 decades (i.e. Year 1970 to Year 2020) of attack events that happened in 203 countries. The original dataset consists of 209,706 observations and 135 variables. Given the large dataset, the team will filter the dataset to eliminate unnecessary data to ensure quality of data used is pertinent to project objective.
 
 # Methodology & Analytical Approach
 
