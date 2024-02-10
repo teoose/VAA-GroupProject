@@ -50,7 +50,7 @@ pacman::p_load(tidyverse,readxl)
 data <- read_excel('C:\\ZacharymwMITB\\VAA-GroupProject\\ProjectProposal\\data\\Summary_variables.xlsx')
 ```
 
-```{r}
+```{r,echo=FALSE}
 
 DT::datatable(data, class = "compact")
 ```
