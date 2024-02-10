@@ -95,6 +95,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+<script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="../site_libs/datatables-binding-0.31/datatables.js"></script>
+<script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+<script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -137,7 +147,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Prototype</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../Codebook.html" rel="" target="">
+    <a class="nav-link" href="../ZacharymwMITB/VAA-GroupProject/References/Codebook.qmd" rel="" target="">
  <span class="menu-text">References</span></a>
   </li>  
 </ul>
@@ -176,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">February 9, 2024</p>
+      <p class="date-modified">February 10, 2024</p>
     </div>
   </div>
     
@@ -219,317 +229,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>For detailed description of the variables, please refer to the Code Book in the reference section.</p></li>
 </ul></li>
 </ol>
-<table class="table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 9%">
-<col style="width: 77%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Column Variable</th>
-<th>Column Number</th>
-<th>Column Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>eventid</td>
-<td>1</td>
-<td>ID labelled by GTD on each incident</td>
-</tr>
-<tr class="even">
-<td>iyear</td>
-<td>2</td>
-<td>Year of Incident</td>
-</tr>
-<tr class="odd">
-<td>imonth</td>
-<td>3</td>
-<td>Month of Incident</td>
-</tr>
-<tr class="even">
-<td>iday</td>
-<td>4</td>
-<td>Day of Incident</td>
-</tr>
-<tr class="odd">
-<td>extended</td>
-<td>6</td>
-<td>Did the event last more than 24 hours</td>
-</tr>
-<tr class="even">
-<td>country_txt</td>
-<td>9</td>
-<td>Country where incident occurred</td>
-</tr>
-<tr class="odd">
-<td>region_txt</td>
-<td>11</td>
-<td>Region where incident occurred</td>
-</tr>
-<tr class="even">
-<td>provstate</td>
-<td>12</td>
-<td>Province or State which incident occurred</td>
-</tr>
-<tr class="odd">
-<td>city</td>
-<td>13</td>
-<td>City, village or town where incident occurred</td>
-</tr>
-<tr class="even">
-<td>latitude</td>
-<td>14</td>
-<td>self-explanatory</td>
-</tr>
-<tr class="odd">
-<td>longitude</td>
-<td>15</td>
-<td>self-explanatory</td>
-</tr>
-<tr class="even">
-<td>vicinity</td>
-<td>17</td>
-<td>Did even occur in immediate vicinity of the city</td>
-</tr>
-<tr class="odd">
-<td>summary</td>
-<td>19</td>
-<td>Incident summary</td>
-</tr>
-<tr class="even">
-<td>crit1</td>
-<td>20</td>
-<td>Political, economic, religious or social goal</td>
-</tr>
-<tr class="odd">
-<td>crit2</td>
-<td>21</td>
-<td>Intention to coerce, intimidate or publicize to larger audience(s)</td>
-</tr>
-<tr class="even">
-<td>crit3</td>
-<td>22</td>
-<td>Outside international humanitarian law</td>
-</tr>
-<tr class="odd">
-<td>doubtterr</td>
-<td>23</td>
-<td>Any doubt if incident is terrorism related</td>
-</tr>
-<tr class="even">
-<td>alternative_txt</td>
-<td>25</td>
-<td>Variable identifies the most likely categorization of incident other than terrorism</td>
-</tr>
-<tr class="odd">
-<td>multiple</td>
-<td>26</td>
-<td>Is attack part of a multiple incident</td>
-</tr>
-<tr class="even">
-<td>success</td>
-<td>27</td>
-<td>Whether attack was successful</td>
-</tr>
-<tr class="odd">
-<td>suicide</td>
-<td>28</td>
-<td>Was it a suicide attack</td>
-</tr>
-<tr class="even">
-<td>attacktype1_txt</td>
-<td>30</td>
-<td>General method of attack based on broad class of tactics used</td>
-</tr>
-<tr class="odd">
-<td>targtype1_txt</td>
-<td>36</td>
-<td>General type of target/victim</td>
-</tr>
-<tr class="even">
-<td>targsubtype1_txt</td>
-<td>38</td>
-<td>Specific target category and level of designation of target type</td>
-</tr>
-<tr class="odd">
-<td>corp1</td>
-<td>39</td>
-<td>Name of corporate entity or government agency targeted</td>
-</tr>
-<tr class="even">
-<td>target1</td>
-<td>40</td>
-<td>Specific person, building or installation etc</td>
-</tr>
-<tr class="odd">
-<td>natlty1_txt</td>
-<td>42</td>
-<td>Nationality of target attacked</td>
-</tr>
-<tr class="even">
-<td>gname</td>
-<td>59</td>
-<td>Perpetrator group name</td>
-</tr>
-<tr class="odd">
-<td>motive</td>
-<td>65</td>
-<td>When report explicitly mentions a specific motive</td>
-</tr>
-<tr class="even">
-<td>individual</td>
-<td>69</td>
-<td>Whether attack was done by one or more individuals affiliated with a group or organization</td>
-</tr>
-<tr class="odd">
-<td>nperps</td>
-<td>70</td>
-<td>Number of perpetrators</td>
-</tr>
-<tr class="even">
-<td>nperpcap</td>
-<td>71</td>
-<td>Number of perpetrators captured</td>
-</tr>
-<tr class="odd">
-<td>claimed</td>
-<td>72</td>
-<td>Whether a group or person claimed the attack</td>
-</tr>
-<tr class="even">
-<td>claimmode_txt</td>
-<td>74</td>
-<td>How the person or group claimed the attack</td>
-</tr>
-<tr class="odd">
-<td>compclaim</td>
-<td>81</td>
-<td>Any competing claims for the attack</td>
-</tr>
-<tr class="even">
-<td>weaptype1_txt</td>
-<td>83</td>
-<td>Main weapon type used in incident</td>
-</tr>
-<tr class="odd">
-<td>weapsubtype1_txt</td>
-<td>85</td>
-<td>Sub weapon type used in incident</td>
-</tr>
-<tr class="even">
-<td>weapdetail</td>
-<td>98</td>
-<td>Any pertinent information on type of weapon used in the incident</td>
-</tr>
-<tr class="odd">
-<td>nkill</td>
-<td>99</td>
-<td>Total number of fatalities</td>
-</tr>
-<tr class="even">
-<td>nkillter</td>
-<td>102</td>
-<td>Number of perpetrator fatalities</td>
-</tr>
-<tr class="odd">
-<td>nwound</td>
-<td>103</td>
-<td>Number of wounded</td>
-</tr>
-<tr class="even">
-<td>nwoundte</td>
-<td>104</td>
-<td>Number of perpetrators wounded</td>
-</tr>
-<tr class="odd">
-<td>property</td>
-<td>105</td>
-<td>Any property damaged as a result of incident</td>
-</tr>
-<tr class="even">
-<td>propextent_txt</td>
-<td>107</td>
-<td>Extent of property damaged</td>
-</tr>
-<tr class="odd">
-<td>propvalue</td>
-<td>108</td>
-<td>Value of property damaged (in USD)</td>
-</tr>
-<tr class="even">
-<td>ishostkid</td>
-<td>110</td>
-<td>Whether victims were taken hostage or kidnapped</td>
-</tr>
-<tr class="odd">
-<td>nhostkid</td>
-<td>111</td>
-<td>Number of victims taken hostage or kidnapped</td>
-</tr>
-<tr class="even">
-<td>nhours</td>
-<td>113</td>
-<td>Number of hours taken hostage or kidnapped</td>
-</tr>
-<tr class="odd">
-<td>ndays</td>
-<td>114</td>
-<td>Number of days taken hostage or kidnapped</td>
-</tr>
-<tr class="even">
-<td>ransom</td>
-<td>117</td>
-<td>Any ransom demanded</td>
-</tr>
-<tr class="odd">
-<td>ransomamt</td>
-<td>118</td>
-<td>Ransom amount demanded (in USD)</td>
-</tr>
-<tr class="even">
-<td>ransompaid</td>
-<td>120</td>
-<td>Was ransom paid</td>
-</tr>
-<tr class="odd">
-<td>hostkidoutcome_txt</td>
-<td>124</td>
-<td>Eventual fate of hostages or kidnapped victims</td>
-</tr>
-<tr class="even">
-<td>addnotes</td>
-<td>126</td>
-<td>Any additional relevant details on the attack</td>
-</tr>
-<tr class="odd">
-<td>INT_LOG</td>
-<td>131</td>
-<td>Whether attack was logistically international</td>
-</tr>
-<tr class="even">
-<td>INT_IDEO</td>
-<td>132</td>
-<td>Whether attack was ideologically international</td>
-</tr>
-<tr class="odd">
-<td>INT_MISC</td>
-<td>133</td>
-<td>When the attack was international but cannot be classified under logistical or ideological</td>
-</tr>
-<tr class="even">
-<td>INT_ANY</td>
-<td>134</td>
-<td>whether attack was any of the above (internationally classified)</td>
-</tr>
-<tr class="odd">
-<td>related</td>
-<td>135</td>
-<td>If the attack is part of a coordinated or multi-part incident, all incidents will be listed here and separated by commas.</td>
-</tr>
-</tbody>
-</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>DT<span class="sc">::</span><span class="fu">datatable</span>(data, <span class="at">class =</span> <span class="st">"compact"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item" id="htmlwidget-539f1544a042026d2cb2" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-539f1544a042026d2cb2">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59"],["eventid","iyear","imonth","iday","extended","country_txt","region_txt","provstate","city","latitude","longitude","vicinity","summary","crit1","crit2","crit3","doubtterr","alternative_txt","multiple","success","suicide","attacktype1_txt","targtype1_txt","targsubtype1_txt","corp1","target1","natlty1_txt","gname","motive","individual","nperps","nperpcap","claimed","claimmode_txt","compclaim","weaptype1_txt","weapsubtype1_txt","weapdetail","nkill","nkillter","nwound","nwoundte","property","propextent_txt","propvalue","ishostkid","nhostkid","nhours","ndays","ransom","ransomamt","ransompaid","hostkidoutcome_txt","addnotes","INT_LOG","INT_IDEO","INT_MISC","INT_ANY","related"],[1,2,3,4,6,9,11,12,13,14,15,17,19,20,21,22,23,25,26,27,28,30,36,38,39,40,42,59,65,69,70,71,72,74,81,83,85,98,99,102,103,104,105,107,108,110,111,113,114,117,118,120,124,126,131,132,133,134,135],["ID labelled by GTD on each incident","Year of Incident","Month of Incident","Day of Incident","Did the event last more than 24 hours","Country where incident occurred","Region where incident occurred","Province or State which incident occurred","City, village or town where incident occurred","self-explanatory","self-explanatory","Did even occur in immediate vicinity of the city","Incident summary","Political, economic, religious or social goal","Intention to coerce, intimidate or publicize to larger audience(s)","Outside international humanitarian law","Any doubt if incident is terrorism related","Variable identifies the most likely categorization of incident other than terrorism","Is attack part of a multiple incident","Whether attack was successful","Was it a suicide attack","General method of attack based on broad class of tactics used","General type of target/victim","Specific target category and level of designation of target type","Name of corporate entity or government agency targeted","Specific person, building or installation etc","Nationality of target attacked","Perpetrator group name","When report explicitly mentions a specific motive","Whether attack was done by one or more individuals affiliated with a group or organization","Number of perpetrators","Number of perpetrators captured","Whether a group or person claimed the attack","How the person or group claimed the attack","Any competing claims for the attack","Main weapon type used in incident","Sub weapon type used in incident","Any pertinent information on type of weapon used in the incident","Total number of fatalities","Number of perpetrator fatalities","Number of wounded","Number of perpetrators wounded","Any property damaged as a result of incident","Extent of property damaged","Value of property damaged (in USD)","Whether victims were taken hostage or kidnapped","Number of victims taken hostage or kidnapped","Number of hours taken hostage or kidnapped","Number of days taken hostage or kidnapped","Any ransom demanded","Ransom amount demanded (in USD)","Was ransom paid","Eventual fate of hostages or kidnapped victims","Any additional relevant details on the attack","Whether attack was logistically international","Whether attack was ideologically international","When the attack was international but cannot be classified under logistical or ideological","whether attack was any of the above (internationally classified)","If the attack is part of a coordinated or multi-part incident, all incidents will be listed here and separated by commas."]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Column Variable<\/th>\n      <th>Column Number<\/th>\n      <th>Column Description<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":2},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"Column Variable","targets":1},{"name":"Column Number","targets":2},{"name":"Column Description","targets":3}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 <ol type="1">
 <li><p><strong>Exploratory Data Analysis via Data Visualisation Methods:</strong> Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:</p>
 <ol type="a">
@@ -639,18 +346,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <details>
 <summary>Show code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gc, <span class="at">event.label =</span> <span class="st">"Due</span><span class="sc">\n</span><span class="st">31 Mar"</span>, <span class="at">event.time =</span> <span class="st">"2024-03-31"</span>,</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.event=</span><span class="fu">c</span>(<span class="st">"salmon"</span>),</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.done=</span><span class="fu">c</span>(<span class="st">"#459397"</span>),</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.notdone=</span><span class="fu">c</span>(<span class="st">"salmon"</span>),</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Project Timeline"</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>     )</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">pch=</span><span class="dv">21</span>, <span class="at">pt.cex=</span><span class="dv">1</span>, <span class="at">cex=</span><span class="fl">0.7</span>, <span class="at">pt.bg=</span><span class="fu">c</span>(<span class="st">"#459397"</span>, <span class="st">"salmon"</span>),</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">border=</span><span class="st">"black"</span>,</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Completed"</span>, <span class="st">"In progress"</span>), <span class="at">bg=</span><span class="st">"white"</span>, <span class="at">xpd=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(gc, <span class="at">event.label =</span> <span class="st">"Due</span><span class="sc">\n</span><span class="st">31 Mar"</span>, <span class="at">event.time =</span> <span class="st">"2024-03-31"</span>,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.event=</span><span class="fu">c</span>(<span class="st">"salmon"</span>),</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.done=</span><span class="fu">c</span>(<span class="st">"#459397"</span>),</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">col.notdone=</span><span class="fu">c</span>(<span class="st">"salmon"</span>),</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Project Timeline"</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>     )</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">pch=</span><span class="dv">21</span>, <span class="at">pt.cex=</span><span class="dv">1</span>, <span class="at">cex=</span><span class="fl">0.7</span>, <span class="at">pt.bg=</span><span class="fu">c</span>(<span class="st">"#459397"</span>, <span class="st">"salmon"</span>),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>     <span class="at">border=</span><span class="st">"black"</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>     <span class="at">legend=</span><span class="fu">c</span>(<span class="st">"Completed"</span>, <span class="st">"In progress"</span>), <span class="at">bg=</span><span class="st">"white"</span>, <span class="at">xpd=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output-display">
-<p><img src="ProjectProposal_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+<p><img src="ProjectProposal_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
 
