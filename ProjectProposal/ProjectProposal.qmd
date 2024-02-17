@@ -47,7 +47,7 @@ pacman::p_load(tidyverse,readxl)
 
 ```{r, echo=FALSE}
 
-data <- read_excel('C:\\ZacharymwMITB\\VAA-GroupProject\\ProjectProposal\\data\\Summary_variables.xlsx')
+data <- read_excel('data/Summary_variables.xlsx')
 ```
 
 ```{r,echo=FALSE}
