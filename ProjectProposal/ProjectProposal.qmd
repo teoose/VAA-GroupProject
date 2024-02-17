@@ -24,40 +24,56 @@ The team aims to use open-source data which includes information on terrorist ev
 The objective of this project is to:
 
 1.  Examine open-source data on terrorist events worldwide (The Global Terrorism Database(GTD)) and derive useful insights on the factors and conditions that may affect international terrorist incidents, and
-2.  Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database(GTD).
+2.  Build a web-enabled interactive visual analytics application by using R Shiny based on this Global Terrorism Database (GTD).
 
 # Data
 
-The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"}. The dataset consist of XX variables and XX datapoints. The team intends to manipulate the dataset as follows:
-
-1.  Create new columns........ to achieve..
-2.  Filter dataset... to achieve..
+The project will examine the Global Terrorism Database™ (GTD) from [University of Maryland](https://www.start.umd.edu/gtd){target="_blank"} that holds 5 decades (i.e. Year 1970 to Year 2020) of attack events that happened in 203 countries. The original dataset consists of 209,706 observations and 135 variables. Given the large dataset, the team will filter the dataset to eliminate unnecessary data to ensure quality of data used is pertinent to project objective.
 
 # Methodology & Analytical Approach
 
 For this project, the following approach will be taken by the team:
 
-1.  **Data Preparation:** Clean the dataset by handling missing values, removing irrelevant variables, filtering variables and encoding categorical variables if necessary.
+1.  **Data Preparation:** Clean the dataset by removing irrelevant variables, filtering variables and encoding categorical variables if necessary.
 
-2.  **Exploratory Data Analysis via Data Visualisation Methods:** Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:
+    -   The table below shows the variables that we have selected to maintain.
 
-    1.  Time-series bar/ line chart and bubble plot
+    -   For detailed description of the variables, please refer to the Code Book in the reference section.
 
-    2.  Geospatial heatmaps and hotspot maps
+```{r,echo=FALSE}
 
-3.  **Confirmatory Data Analysis via Statistical Methods:** Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.
+pacman::p_load(tidyverse,readxl)
+```
 
-    1.  Correlation test:
+```{r, echo=FALSE}
+
+data <- read_excel('data/Summary_variables.xlsx')
+```
+
+```{r,echo=FALSE}
+
+DT::datatable(data, class = "compact")
+```
+
+1.  **Exploratory Data Analysis via Data Visualisation Methods:** Analyse the dataset to understand the distribution of variables, identify patterns, and explore correlation between variables. Such as using:
+
+    a.  Time-series bar/ line chart and bubble plot
+
+    b.  Geospatial heatmaps and hotspot maps
+
+2.  **Confirmatory Data Analysis via Statistical Methods:** Analyse the dataset using statistical testing tools to test hypotheses, evaluate the findings and arguments (e.g. strength of relationships between variables) and make statistical observations under uncertainty.
+
+    a.  Correlation test:
 
         -   Correlation web plot, or
 
         -   Significant Test of Correlation: ggscatterstats()
 
-    2.  Model Diagnostic: checking for multicollinearity
+    b.  Model Diagnostic: checking for multicollinearity
 
-    3.  Model Diagnostic: checking normality assumption
+    c.  Model Diagnostic: checking normality assumption
 
-    4.  Oneway ANOVA Test: ggbetweenstats() method
+    d.  Oneway ANOVA Test: ggbetweenstats() method
 
 # Prototype Sketches
 
@@ -67,8 +83,9 @@ These will subsequently be refined as we further codify and render our graphs an
 
 The various sections of our app consists of:- 
 
-1.  Landing page - to visually summarise the impact of Global Terrorism incidents till date 
+1.  **Landing page** - to visually summarise the impact of Global Terrorism incidents till date 
 
+<<<<<<< HEAD
 <!-- -->
 
 2.  Global trends- to examine the trends over time and deep dive into the nature of events 
@@ -84,6 +101,15 @@ The various sections of our app consists of:- 
 <!-- -->
 
 5.  Confirmatory Analysis - to visualise and examine/ test for relationships, associations and correlations etc 
+=======
+2.  **Global trends**- to examine the trends over time and deep dive into the nature of events 
+
+3.  **Country statistics** - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism in that locality 
+
+4.  **Distribution analysis** - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks 
+
+5.  **Confirmatory Analysis** - to visualise and examine/ test for relationships, associations and correlations etc 
+>>>>>>> d2b03984b93f8cf4f26359ccfd568215cc4b2f66
 
 ::: panel-tabset
 ## Landing Page
@@ -108,8 +134,11 @@ Proposed key features on the page include: 
 
 -   Line chart to plot how the number of attacks, casualties, wounded have changed over time, with the use of time slider or play button for animated graph. 
 
+<<<<<<< HEAD
 <!-- -->
 
+=======
+>>>>>>> d2b03984b93f8cf4f26359ccfd568215cc4b2f66
 -   Bar chart to show the top terror groups. 
 
 -   Word cloud to visualise the motives behind the attacks. 
@@ -180,8 +209,6 @@ Our team intends to use the following R packages to run the R Shiny Application:
 -   *parameters*: an R package used for processing parameters of various statistical models.
 
 -   *RColorBrewer*: an R package that provide various colour schemes and colour palettes.
-
--   *patchwork*: an R package for preparing composite figure created using ggplot2.
 
 -   *DT*: an R interface to the JavaScript library DataTables that create interactive table on html page.
 

@@ -2,18 +2,17 @@ project:
   type: website
 
 website:
-  title: "Global Terrorism"
+  title: "Decoding Chaos"
   page-navigation: true
   back-to-top-navigation: true
+  search: true
   sidebar: false
   navbar:
-    logo: ""
+    logo: "images/Nav_Logo4.png"
     title: false
-    search: true
-    
     right:
       - text: "Home"
-        href: "home.html"
+        href: index.qmd
       - text: "Shiny App"
         href: ".html"
       - text: "User Guide"
@@ -22,6 +21,8 @@ website:
         href: "ProjectProposal/ProjectProposal.html"
       - text: "Prototype"
         href: "Prototype/Prototype.html"
+      - text: "References"
+        href: "References/Codebook.html"
   page-footer:
     right: 
       - text: "©2024!"
