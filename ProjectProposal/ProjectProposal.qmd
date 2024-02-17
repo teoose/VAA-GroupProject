@@ -69,28 +69,24 @@ The various sections of our app consists of:- 
 
 1.  Landing page - to visually summarise the impact of Global Terrorism incidents till date 
 
-```{=html}
 <!-- -->
-```
+
 2.  Global trends- to examine the trends over time and deep dive into the nature of events 
 
-```{=html}
 <!-- -->
-```
+
 3.  Country statistics - to enable users to deep dive into individual countries or regions to understand the impact of Terrorism in that locality 
 
-```{=html}
 <!-- -->
-```
+
 4.  Distribution analysis - to examine the Distribution of Terror events against categorical variable like nature of targets, weapons used and types of attacks 
 
-```{=html}
 <!-- -->
-```
+
 5.  Confirmatory Analysis - to visualise and examine/ test for relationships, associations and correlations etc 
 
 ::: panel-tabset
-## Landing Page 
+## Landing Page
 
 This tab will serve as a “landing page” to inform and summarise the global impact till date. 
 
@@ -102,7 +98,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-4114247711.png)
 
-## Global Trends 
+## Global Trends
 
 This tab will serve as the dashboard in the R Shiny application that will identify the most affected countries, groups with most attacks, types of weapons used, forms of attacks etc. 
 
@@ -112,9 +108,8 @@ Proposed key features on the page include: 
 
 -   Line chart to plot how the number of attacks, casualties, wounded have changed over time, with the use of time slider or play button for animated graph. 
 
-```{=html}
 <!-- -->
-```
+
 -   Bar chart to show the top terror groups. 
 
 -   Word cloud to visualise the motives behind the attacks. 
@@ -125,7 +120,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-2416809596.png)
 
-## Country Statistics 
+## Country Statistics
 
 This tab will serve as a continuation from the ‘Global Trends’ tab.  
 
@@ -137,7 +132,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-2405250291.png)
 
-## Distribution 
+## Distribution
 
 This tab will display the distribution of Terror events based on the different categorical variables such as Target/ Weapon/ Attack/ Region etc. 
 
@@ -147,7 +142,7 @@ Proposed key features on the page include: 
 
 ![](images/clipboard-2444559577.png)
 
-## Confirmatory 
+## Confirmatory
 
 This tab will examine and visualise the relationships, associations and correlations of different variables. 
 

@@ -52,5 +52,7 @@ p_interactive <- ggplotly(p, tooltip = c("country_txt", "Incidents", "Kills"))
 p_interactive
 ```
 
-```         
+```{r}
+ggplotly(p, tooltip = c("country_txt", "Incidents", "Kills"))
+
 ```
