@@ -14,7 +14,9 @@ execute:
 ## Loading R package
 
 ```{r}
-pacman::p_load(tidyverse, ggplot2, plotly, dplyr)
+pacman::p_load(tidyverse, leaflet, treemap, rmarkdown, highcharter, viridis,
+               ggplot2, tidyr, dplyr, viridisLite, RColorBrewer, countrycode, 
+               wordcloud, tidytext, tm, plotly)
 
 ```
 
@@ -54,5 +56,11 @@ p_interactive
 
 ```{r}
 ggplotly(p, tooltip = c("country_txt", "Incidents", "Kills"))
+
+```
+
+```{r}
+
+
 
 ```
